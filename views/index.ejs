@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NodeJS Example</title>
+    <meta charset="utf-8">
+    <meta name="description"  content="This is the index">
+    <meta name="author"       content="Tundra Fizz">
+    <link rel="shortcut icon" href="/img/icon.jpg">
+    <link rel="stylesheet"    href="/css/theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <table>
+        <tr>
+          <th>Symbol</th>
+          <th>Coin</th>
+          <th>Current Price</th>
+          <th>Volume</th>
+          <th>Total Value</th>
+        </tr>
+        <% for(var i = 0; i < data.length; i++){ %>
+          <tr>
+            <td><%= data[i]["symbol"] %></td>
+            <td><%= data[i]["name"] %></td>
+            <td><%= data[i]["current_price"] %></td>
+            <td><%= data[i]["volume"] %></td>
+            <td><%= data[i]["total_value"] %></td>
+          </tr>
+        <% } %>
+        <tr>
+          <td colspan="4"></td>
+          <td><%= grandTotal %></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
