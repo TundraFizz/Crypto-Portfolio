@@ -35,7 +35,7 @@ function MySql(){
   this.con = mysql.createConnection({
     "host"    : "localhost",
     "user"    : "root",
-    "password": "Fw2uBldJzgeQcxd65hHd",
+    "password": "",
     "database": "portfolio"
   });
 }
