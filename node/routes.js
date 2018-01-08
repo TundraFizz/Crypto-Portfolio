@@ -9,13 +9,15 @@ app.post("/sample", function(req, res){
 });
 
 app.get("/", function(req, res){
-  var sql  = "SELECT * FROM coins";
-  var args = [];
+  var sql1 = "SELECT * FROM coins";
+  var sql2 = "SELECT grand_total FROM total WHERE id=1";
 
-  mySql.con.query(sql, args, function(err, result){
-    res.render("index.ejs", {
-      "data":       result,
-      "grandTotal": folio.grandTotal.toFixed(2)
+  mySql.con.query(sql1, function(err, result1){
+    mySql.con.query(sql2, function(err, result2){
+      res.render("index.ejs", {
+        "data":       result1,
+        "grandTotal": result2[0]["grand_total"].toFixed(2)
+      });
     });
   });
 });
@@ -33,7 +35,7 @@ function MySql(){
   this.con = mysql.createConnection({
     "host"    : "localhost",
     "user"    : "root",
-    "password": "",
+    "password": "Fw2uBldJzgeQcxd65hHd",
     "database": "portfolio"
   });
 }
