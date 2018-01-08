@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NodeJS Example</title>
+    <title>Portfolio</title>
     <meta charset="utf-8">
-    <meta name="description"  content="This is the index">
+    <meta name="description"  content="Crypto portfolio">
     <meta name="author"       content="Tundra Fizz">
+    <meta name="viewport"     content="width=460">
     <link rel="shortcut icon" href="/img/icon.jpg">
-    <link rel="stylesheet"    href="/css/theme.css">
+    <link rel="stylesheet"    href="/css/wip.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   </head>
 
@@ -16,9 +17,9 @@
         <tr>
           <th>Symbol</th>
           <th>Coin</th>
-          <th>Current Price</th>
+          <th style="min-width: 100px;">Current Price</th>
           <th>Volume</th>
-          <th>Total Value</th>
+          <th style="min-width: 80px;">Total Value</th>
         </tr>
         <% for(var i = 0; i < data.length; i++){ %>
           <tr>

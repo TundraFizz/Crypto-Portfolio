@@ -49,7 +49,12 @@ body {
 }
 
 table {
-  margin: 16px 0px;
+  /*border: 1px solid black;*/
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
 }
 
 #target input {
@@ -70,7 +75,7 @@ table {
 }
 
 .content {
-  margin:      6px 12px;
+  margin:      12px 12px;
   font-family: droid-sans;
 }
 

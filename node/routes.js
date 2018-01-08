@@ -15,7 +15,7 @@ app.get("/", function(req, res){
   mySql.con.query(sql, args, function(err, result){
     res.render("index.ejs", {
       "data":       result,
-      "grandTotal": folio.grandTotal
+      "grandTotal": folio.grandTotal.toFixed(2)
     });
   });
 });
